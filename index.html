@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head> 
+	<meta charset="UTF-8"> 
+	<title>flowers</title>
+	<link rel="stylesheet" href="index.css">
+	<script src="index.js"></script> 
+
+
+</head>
+
+<body>
+
+	<div id="header">
+	<div class="grid-init-info1 grid-info1">
+		<div class="box-init-info1 box">about</div>
+		<div class="box-init-info1 box">events</div>		<div class="box-init-info2 box">Vintage Flowers</div>
+		<div class="box-init-info1 box">shop</div>
+		<div class="box-init-info1 box">contact</div>
+	</div>
+	</div>
+
+
+	<div id="ticker"></div>
+
+	<div id="bouquet"></div>
+	<div id="text_first">Букет<br>на любой случай</div>
+	<div id="text_second">Доставка цветов, оформление праздников,<br>подарочные наборы</div>
+	<div id="flower"></div>
+
+	<div id="button"><p>Оформить заказ</p></div>
+
+
+</body>
+
+
+<script>
+
+	let press = document.getElementById("button");
+	let step = 1;
+
+	function move_ticker() {
+		let backgroundPositionX = parseFloat(getComputedStyle(ticker).backgroundPositionX) || 0;
+		ticker.style.backgroundPositionX = `${backgroundPositionX - step}px`;
+	}
+	
+	setInterval(move_ticker, 1000/60);
+
+
+	press.addEventListener("mouseout", function () {
+		press.style.backgroundColor = "rgb(255,255,255)";
+		press.style.borderColor = "rgb(31,93,52)";
+		press.style.width = "320px";
+})
+	press.addEventListener("mouseover", function () {
+		press.style.backgroundColor = "rgb(216,230,255)";
+		press.style.borderColor = "rgb(31,93,52)";
+		press.style.width = "340px";
+})
+
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
